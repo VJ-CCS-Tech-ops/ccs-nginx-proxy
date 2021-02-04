@@ -1,0 +1,28 @@
+[
+  {
+    "name": "nginx",
+    "image": "nginx:stable",
+    "cpu": 10,
+    "memory": 512,
+    "essential": true,
+    "portMappings": [
+      {
+        "containerPort": 8080
+      }
+    ],
+    "mountPoints": [
+      {
+        "sourceVolume": "nginx-home",
+        "containerPath": "/var/nginx_home"
+      }
+    ],
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "nginxCloudWatchLogGroup",
+        "awslogs-region": "eu-west-2",
+        "awslogs-stream-prefix": "nginx"
+      }
+    }
+  }
+]

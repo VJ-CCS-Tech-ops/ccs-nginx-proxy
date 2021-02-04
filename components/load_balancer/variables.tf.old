@@ -1,0 +1,22 @@
+variable "acm_domain_name"{
+  default =
+}
+
+variable "nginx_load_balancer_security_group_name" {
+
+  default =
+}
+
+variable "nginx_public_subnet_a_name"{
+
+default =
+}
+
+variable "nginx_public_subnet_b_name" {
+
+  default =
+}
+
+variable "nginx_vpc_name"{
+  default = "nginxVPC"
+}
